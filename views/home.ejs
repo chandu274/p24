@@ -1,0 +1,92 @@
+<%- include("partials/navbar.ejs") %>
+<section class="four_boxes_bg">
+  <div><h1 class="welcome_note">welcome to vannnamei Insight Repository!</h1></div>
+  <section class="four_cal">
+    <div class="temp3">
+        <div><button id="blind" class="four_cal_buttons" ><p class="text_manipulation"><img src="pngtrash/calculator.svg" alt="calculator_svg"> Feed Calculator</p></button></div>
+        <div><button id="trendz" class="four_cal_buttons"><p class="text_manipulation"><img src="pngtrash/graph-up-arrow.svg" alt="trend_arrow"> Market Insights</p></button></div>
+        <div><button id="Deceases" class="four_cal_buttons"><p class="text_manipulation"><img src="pngtrash/virus.svg" alt="virus"> Diseases</p></button></button></div>
+        <div><button id="wheather" class="four_cal_buttons"><p class="text_manipulation"><img src="pngtrash/cloud-sun.svg" alt="wheather"> Weather</p></button></button></div>
+    </div>
+</section>
+   <section class="temp2"><img class="farmerimg" src="pngtrash/bg_farmerpicnew.png" alt="background_farmerpic"></section>
+  </section>
+  <section class="container_2">
+    <div class="box_sizing">
+      <div class="intro_heading">From Mexican Inshore Waters to Global Tides: The Origins and Significance of Penaeus vannamei</h2></div>
+      <div class="intro_text"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Where we dive into the fascinating world of Vannamei shrimp, also known as Pacific white leg shrimp.
+        As one of the most sought-after and widely consumed shrimp varieties globally.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Basically it is Native to the eastern Pacific Ocean,
+         Penaeus vannamei has played a pivotal role in the lives of Mexican inshore fishermen,becoming   an essential species for their  livelihoods.
+          The story of this shrimp species takes a significant turn with the advent of fisheries development, marking the commencement of shrimp larval
+           production in hatcheries.the development of specialized feeds, the technification of growth processes, the establishment of freezing installations,
+            and the creation of efficient market channels, among other crucial factors. This marked the beginning of a comprehensive and sophisticated
+             approach to shrimp farming.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This progress wasn't limited to local shores but quickly expanded globally. Penaeus vannamei stands today as the most
+              extensively cultured shrimp,  reaching the waters of at least 27 countries. Major production stretch from the India, China, Indonesia, Vietnam,
+              Mexico, Malaysia, United States,  Thailand. The global embrace of Penaeus vannamei mirrors its adaptability, versatility, and the collaborative spirit 
+              of aquaculture communities worldwide. Explore with us as we uncover the remarkable journey of this extraordinary shrimp species.</p></div>
+    </div>  
+  </section>
+  <%- include("partials/footer.ejs") %>
+  <script>
+    const button1 = document.getElementById("blind");
+    button1.addEventListener("click", function(){
+        window.location.href = '/calculator';
+        button1.style.background = "black";
+    }); 
+
+    button1.addEventListener("mouseover", function(){
+        button1.style.background ="#00001a";
+        button1.style.color = "white";
+    });
+
+    button1.addEventListener("mouseout", function(){
+        button1.style.background ="";
+        button1.style.color = "";
+    });
+    const button2 = document.getElementById("trendz");
+    button2.addEventListener("click", function(){
+        window.location.href = '/market';
+        button2.style.background = "black";
+    }); 
+
+    button2.addEventListener("mouseover", function(){
+        button2.style.background ="#00001a";
+        button2.style.color = "white";
+    });
+
+    button2.addEventListener("mouseout", function(){
+        button2.style.background ="";
+        button2.style.color = "";
+    });
+    const button3 = document.getElementById("Deceases");
+    button3.addEventListener("click", function(){
+        window.location.href = '/disease';
+        button3.style.background = "black";
+    }); 
+
+    button3.addEventListener("mouseover", function(){
+        button3.style.background ="#00001a";
+        button3.style.color = "white";
+    });
+
+    button3.addEventListener("mouseout", function(){
+        button3.style.background ="";
+        button3.style.color = "";
+    });
+    const button4 = document.getElementById("wheather");
+button4.addEventListener("click", function(){
+    window.location.href = '/weather';
+    button4.style.background = "black";
+}); 
+
+button4.addEventListener("mouseover", function(){
+    button4.style.background ="#00001a";
+    button4.style.color = "white";
+});
+
+button4.addEventListener("mouseout", function(){
+    button4.style.background ="";
+    button4.style.color = "";
+});
+
+  </script>

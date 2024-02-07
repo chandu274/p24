@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>vannnamei culture</title>
+        <link rel="icon" type="image/x-icon" href="/pngtrash/web_logo.png">
+        <link rel="stylesheet" href="style.css">
+        <style>
+          .containor{
+            display: flex;
+            flex-direction: row;
+            background-color: aqua;
+            flex-basis: 200px;
+          }
+
+        </style>
+    </head>
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+              <div class="threeline"></div>
+              <div class="threeline"></div>
+              <div class="threeline"></div>
+            </label>
+            <label class="logo_top_height" id="logo"><img src="pngtrash/main_logo.png" height="60px" height=auto></label>
+            <ul >
+              <li><a class="active" href="/">Home</a></li>
+              <li><a href="#">news</a></li>
+              <li ><a href="/about">about</a></li>
+              <li><a href="/career">career</a></li>
+            </ul>
+          </nav>
+          <hr class="navline">
+    </header>
+    <main>
+    <script>
+    const logo = document.getElementById("logo");
+    logo.addEventListener("click", function(){
+    window.location.href = '/';
+    });
+    </script>

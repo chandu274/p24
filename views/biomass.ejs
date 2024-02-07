@@ -1,0 +1,116 @@
+<%- include("partials/navbar.ejs") %>
+<h1 class="cal_heading3">Calculators</h1>
+<section class="weired">
+    <section class="four_cal3">
+        <div class="temp3">
+            <div><button id="blind" class="four_cal_buttons3">Blind feed</button></div>
+            <div><button id="intake" class="four_cal_buttons3">Daily feed</button></div>
+            <div><button id="number" class="four_cal_buttons3">Number</button></div>
+            <div><button id="biomass" class="four_cal_buttons3">Biomass</button></div>
+        </div>
+    </section>
+    <section class="blind_cal_section3"> 
+        <div class="blind_cal">
+            <h2 class="feed_heading">Biomass</h2>
+            <form id="calculatorForm" action="/biomass1" class="blind_cal_box" method="post" >
+                <label for="bnumber4" class="input1">Number =</label>
+                <input  type="number" id="number" name="bnumber4" class="socket1"><br><br>
+                <label for="bcount4" class="input21">Count =</label>
+                <input type="number" id="count" name="bcount4" class="socket1"><br><br>
+                <label for="feed" class="input3">Feed Name =</label>
+                <select id="feed" class="socket1">
+                    <option value="no">No need</option>
+                  </select><br><br>
+                <input type="submit" value="calculate" class="submit" >
+                <input type="reset" value="Reset" class="reset">
+              </form>
+        </div>
+        <div class="blind_cal">
+            <% if ( count4 === "" && number4 ==="") { %>
+                <h2 class="default_data_heading">Enter required data</h2>
+                <p class="default_data_sub">Number:-<span class="fade">Number of shrimps within the pond.</span></p>
+                <p class="default_data_sub1">Count:-<span class="fade">Number of shrimp per kilogram</span></p>
+                <p class="default_data_sub1">Feed Name:-<span class="fade">Name the feed you're using.</span></p>
+                <p class="default_data_sub2">   **biomass denotes the total weight <br>of shrimp in a pond**</p>
+            <% } else { %>
+                <!-- Code to be executed if the condition is false (number is not an empty string) -->
+                <p>The condition is false. Number: <%= count4 %>, Days: <%= number4 %></p>
+            <% } %>
+        </div>
+    </section>
+    <section class="extra3">
+        <h1 class="cal_experimental">Experimental</h1>
+        <section class="four_cal_dummy">`
+            <div class="temp3">
+                <div><button id="" class="four_cal_buttons">Weightage</button></div>
+            </div>
+        </section> 
+    </section> 
+</section>
+<%- include("partials/footer.ejs") %>
+<script>
+    const button1 = document.getElementById("blind");
+    button1.addEventListener("click", function(){
+        window.location.href = '/calculator';
+        button1.style.background = "black";
+    }); 
+
+    button1.addEventListener("mouseover", function(){
+        button1.style.background ="#00001a";
+        button1.style.color = "white";
+    });
+
+    button1.addEventListener("mouseout", function(){
+        button1.style.background ="";
+        button1.style.color = "";
+    });
+    const button2 = document.getElementById("intake");
+    button2.addEventListener("click", function(){
+        window.location.href = '/intake';
+        button2.style.background = "black";
+    }); 
+
+    button2.addEventListener("mouseover", function(){
+        button2.style.background ="#00001a";
+        button2.style.color = "white";
+    });
+
+    button2.addEventListener("mouseout", function(){
+        button2.style.background ="";
+        button2.style.color = "";
+    });
+    const button3 = document.getElementById("number");
+    button3.addEventListener("click", function(){
+        window.location.href = '/number';
+        button3.style.background = "black";
+    }); 
+
+    button3.addEventListener("mouseover", function(){
+        button3.style.background ="#00001a";
+        button3.style.color = "white";
+    });
+
+    button3.addEventListener("mouseout", function(){
+        button3.style.background ="";
+        button3.style.color = "";
+    });
+    const button4 = document.getElementById("biomass");
+    button4.addEventListener("click", function(){
+    window.location.href = '/biomass';
+    button4.style.background = "black";
+    }); 
+
+    button4.addEventListener("mouseover", function(){
+    button4.style.background ="#00001a";
+    button4.style.color = "white";
+    });
+
+    button4.addEventListener("mouseout", function(){
+    button4.style.background ="";
+    button4.style.color = "";
+    });
+
+
+
+
+</script>

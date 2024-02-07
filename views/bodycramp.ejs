@@ -1,0 +1,66 @@
+<%- include("partials/navbar.ejs") %>
+<section class="desease">
+    <div class="d_container1"></div>
+    <div class="d_container2">
+        <div></div>
+        <div><h1 class="d_heading">Addressing Cramping Issues in Vannamei Shrimp Culture: Causes, Symptoms, and Remedial Measures</h1></div>
+        <div class="mano1"><p class="d_paragraph">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cramping is a common issue in 
+            Vannamei shrimp culture, the main reasons for this disease is  mineral imbalance in the pond, vitamin 
+            deficiencies, or sudden thermal shocks. The vulnerability of the shrimp's weak back during escape reflexes 
+            can also lead to cramping. This condition adversely affects the shrimp's swimming capability, making it 
+            susceptible to predation by other shrimp during those episodes.
+            </p></div>
+            <br>
+            <br>
+            <div class="flex">
+                <img class="height" src="pngtrash/cramp.jpg" alt="wbeforecramp_img" >
+                <img class="height" src="pngtrash/cramp1.jpg" alt="aftercramp_img" >
+            </div>
+            <br>
+            <br>
+            <div><h2 class="d_heading">Symptoms:</h2></div>
+            <div>
+                <ul class="d_paragraph">
+                    <li>• Presence of White Muscle: One symptom of body cramps in Vannamei shrimp is the observation of 
+                        white muscle, indicating the occurrence of this condition.</li>
+                    <li>• Body Bends: Another noticeable sign is the manifestation of body bends in shrimp, serving as a 
+                        visible indicator of the presence of body cramps.</li>
+                </ul>
+            </div>
+            <div><h2 class="d_heading">Precautions & Treatment:</h2></div>
+            <div>
+                <ul class="d_paragraph">
+                    <li>• Monitoring abrupt temperature changes.</li>
+                    <li>• Ensure the adequate intake of magnesium, 
+                        potassium, calcium, and other essential minerals 
+                        to prevent and alleviate body cramps.</li>
+                    <li>• When dealing with a lack of vitamins, opt for vitamin C, B-complex
+                        , and E supplements to achieve desired results.</li>
+                    <li>• use high quality feed.</li>
+                </ul>
+            </div>
+            <div class="right">
+                <div id="p4"><img src="/pngtrash/previous.png" alt="next"></div>
+                <div id="n4"><img src="/pngtrash/next.png" alt="next"></div>
+            </div>
+    </div>
+    <div class="d_container3">
+
+    </div>
+</section>
+
+
+
+
+
+<%- include("partials/footer.ejs") %>
+<script>
+    const p4 = document.getElementById("p4");
+p4.addEventListener("click", function(){
+    window.location.href = '/whitegut';
+}); 
+const n4 = document.getElementById("n4");
+n4.addEventListener("click", function(){
+    window.location.href = '/bodycramps';
+});
+</script>
