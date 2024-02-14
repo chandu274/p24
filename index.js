@@ -2,6 +2,8 @@ import express from "express";
 import bodyParser from "body-parser";
 import session from "express-session";
 import { v4 as uuid } from 'uuid';
+import Decimal from "decimal.js";
+
 
 const app = express();
 const port = 3400;
@@ -81,14 +83,14 @@ app.post("/biomass1", (req, res) => {
 });
 
 function renderPage(req, res, template) {
-  const number = req.session.number || "";
-  const days = req.session.days || "";
-  const numberd = req.session.numberd || "";
-  const countd = req.session.countd || "";
-  const fintake = req.session.fintake || "";
-  const fcount = req.session.fcount || "";
-  const number4 = req.session.number4 || "";
-  const count4 =req.session.count4 || "";
+  const number = parseInt(req.session.number) || "";
+  const days = parseInt(req.session.days) || "";
+  const numberd = parseInt(req.session.numberd) || "";
+  const countd = parseInt(req.session.countd) || "";
+  const fintake = parseFloat(req.session.fintake) || "";
+  const fcount = parseInt(req.session.fcount) || "";
+  const number4 = parseInt(req.session.number4) || "";
+  const count4 = parseInt(req.session.count4) || "";  
   res.render(template, { number, days, numberd, countd, fintake, fcount, number4, count4 });
 }
 
@@ -140,6 +142,10 @@ app.get("/weather", (req, res) => {
 
 app.get("/market", (req, res) => {
   res.render("market.ejs");
+});
+
+app.get("/whitespot", (req, res) => {
+  res.render("whitespot.ejs");
 });
 
 
