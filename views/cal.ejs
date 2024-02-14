@@ -7,6 +7,7 @@
             <div><button id="intake" class="four_cal_buttons">Daily feed</button></div>
             <div><button id="number" class="four_cal_buttons">Number</button></div>
             <div><button id="biomass" class="four_cal_buttons">Biomass</button></div>
+            
         </div>
     </section>
     <section class="blind_cal_section"> 
@@ -16,7 +17,7 @@
                 <label for="number" class="input1">Number =</label>
                 <input  type="number" id="number" name="number" class="socket1"><br><br>
                 <label for="nod" class="input2">Days =</label>
-                <input type="number" id="nod" name="nod" class="socket1"><br><br>
+                <input type="number" id="nod" name="nod" class="socket1" max="30"><br><br>
                 <label for="feed" class="input3">Feed Name =</label>
                 <select id="feed" class="socket1">
                     <option value="no">select</option>
@@ -25,19 +26,231 @@
                     <option value="daksha">daksha</option>
                   </select><br><br>
                 <input type="submit" value="calculate" class="submit" >
-                <input type="reset" value="Reset" class="reset">
+                <input id="lmorg" type="reset" value="Reset" class="reset">
               </form>
         </div>
-        <div class="blind_cal">
-            <% if ( number === "" && days ==="") { %>
+        <div class="blind_cal" id="change" style=" <% if (number !== "" || days !== "") { %>background-color: #00001a;<% } %>">
+            <%var result;
+            var daysValue = parseInt(days);%>
+            <% if (number === "" && days === "") { %>
                 <h2 class="default_data_heading">Enter required data</h2>
                 <p class="default_data_sub">Number:-<span class="fade">Number of shrimps within the pond.</span></p>
                 <p class="default_data_sub1">Days:-<span class="fade">Number of days</span></p>
                 <p class="default_data_sub1">Feed Name:-<span class="fade">Name the feed you're using.</span></p>
                 <p class="default_data_sub2">**Apply the blind feeding technique exclusively <br>for the first 30 days from the start of the crop.**</p>
             <% } else { %>
-                <!-- Code to be executed if the condition is false (number is not an empty string) -->
-                <p>The condition is false. Number: <%= number %>, Days: <%= days %></p>
+                <% if (daysValue === 1) {
+                result = parseInt(number) * (2000 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 2) {
+                result = parseInt(number) * (2300 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 3) {
+                result = parseInt(number) * (2600 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 4) {
+                result = parseInt(number) * (2900 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 5) {
+                result = parseInt(number) * (3200 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 6) {
+                result = parseInt(number) * (3500 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 7) {
+                result = parseInt(number) * (3900 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 8) {
+                result = parseInt(number) * (4300 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 9) {
+                result = parseInt(number) * (4700 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 10) {
+                result = parseInt(number) * (5100 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 11) {
+                result = parseInt(number) * (5500 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 12) {
+                result = parseInt(number) * (6000 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 13) {
+                result = parseInt(number) * (6600 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 14) {
+                result = parseInt(number) * (7200 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 15) {
+                result = parseInt(number) * (7800 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 16) {
+                result = parseInt(number) * (8400 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 17) {
+                result = parseInt(number) * (9000 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 18) {
+                result = parseInt(number) * (9600 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 19) {
+                result = parseInt(number) * (10200 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 20) {
+                result = parseInt(number) * (10800 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 21) {
+                result = parseInt(number) * (11400 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 22) {
+                result = parseInt(number) * (12000 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 23) {
+                result = parseInt(number) * (12800 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 24) {
+                result = parseInt(number) * (13200 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 25) {
+                result = parseInt(number) * (13800 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 26) {
+                result = parseInt(number) * (14400 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 27) {
+                result = parseInt(number) * (15000 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 28) {
+                result = parseInt(number) * (15600 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 29) {
+                result = parseInt(number) * (16200 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            } else if (daysValue === 30) {
+                result = parseInt(number) * (16800 / 100000);
+            %>
+                <p class="result">result:</p>
+                <p class="result1">Amount of feed required</p>
+                <p class="result2"><%= (result/1000).toFixed(3) %> kg (approx)</p>
+            <%
+            }
+            %>
             <% } %>
         </div>
     </section>
@@ -52,6 +265,17 @@
 </section>
 <%- include("partials/footer.ejs") %>
 <script>
+
+
+
+
+
+
+
+
+
+
+
     const button1 = document.getElementById("blind");
     button1.addEventListener("click", function(){
         window.location.href = '/calculator';
@@ -117,3 +341,4 @@
 
 
 </script>
+

@@ -16,7 +16,7 @@
                 <label for="fcount3" class="input12">Count =</label>
                 <input  type="number" id="number" name="fcount3" class="socket1"><br><br>
                 <label for="fintake3" class="input22">Feed intake/day =</label>
-                <input type="number" id="nod" name="fintake3" class="socket1"><br><br>
+                <input type="number" id="nod" name="fintake3" class="socket1" step="any"><br><br>
                 <label for="feed" class="input32">Feed Name =</label>
                 <select id="feed" class="socket1">
                     <option value="no">select</option>
@@ -28,7 +28,10 @@
                 <input type="reset" value="Reset" class="reset">
               </form>
         </div>
-        <div class="blind_cal">
+        <div class="blind_cal" id="change" style = " <% if (fintake !== "" || fcount !== "") { %>background-color: #00001a;<% } %>">
+            <%
+            var awb = (1000 / parseInt(fcount)).toFixed(2);
+            %>
             <% if ( fcount === "" && fintake ==="") { %>
                 <h2 class="default_data_heading">Enter required data</h2>
                 <p class="default_data_sub">Feed intake/day:-<span class="fade">The amount of food consumed by shrimp in a day.</span></p>
@@ -36,8 +39,117 @@
                 <p class="default_data_sub1">Feed Name:-<span class="fade">Name the feed you're using.</span></p>
                 <p class="default_data_sub2">**This Number calculator is for assumption <br>purposes only. Results may vary based on pond <br>conditions and environmental factors.**</p>
             <% } else { %>
-                <!-- Code to be executed if the condition is false (number is not an empty string) -->
-                <p>The condition is false. Number: <%= fcount %>, Days: <%= fintake %></p>
+                <% if (awb >= 0.10 && awb <= 1.00) { %>
+                    <% var intial_value = 0.48; %>
+                    <% var intial_input = 0.10; %>
+                    <% var lmorg = (awb - intial_input) * 100; %>
+                    <% var dasara = (lmorg * 0.07) + intial_value; %>
+                    <% var result =  parseFloat(fintake)/(dasara / 100000); %>
+                
+                    <p class="result">Result:</p>
+                    <p class="result1">Number:</p>
+                    <p class="result2"><%= Math.floor(result) %> (units)</p>
+                <% } else if (awb >= 1.01 && awb <= 1.55) { %>
+                    <% var intial_value = 6.83; %>
+                    <% var intial_input = 1.01; %>
+                    <% var lmorg = (awb - intial_input) * 100; %>
+                    <% var dasara = (lmorg * 0.06) + intial_value; %>
+                    <% var result = parseFloat(fintake)/(dasara / 100000); %>
+                
+                    <p class="result">Result:</p>
+                    <p class="result1">Number:</p>
+                    <p class="result2"><%= Math.floor(result) %> (units)</p>
+                <% } else if (awb >= 1.56 && awb <= 2.40) { %>
+                    <% var intial_value = 10.13; %>
+                    <% var intial_input = 1.56; %>
+                    <% var lmorg = (awb - intial_input) * 100; %>
+                    <% var dasara = (lmorg * 0.025) + intial_value; %>
+                    <% var result = parseFloat(fintake)/(dasara / 100000); %>
+                
+                    <p class="result">Result:</p>
+                    <p class="result1">Number:</p>
+                    <p class="result2"><%= Math.floor(result) %> (units)</p>
+                <% } else if (awb >= 2.41 && awb <= 3.00) { %>
+                    <% var intial_value = 14.00; %>
+                    <% var intial_input = 2.41; %>
+                    <% var lmorg = (awb - intial_input) * 100; %>
+                    <% var dasara = (lmorg * 0.025) + intial_value; %>
+                    <% var result = parseFloat(fintake)/(dasara / 100000); %>
+                
+                    <p class="result">Result:</p>
+                    <p class="result1">Number:</p>
+                    <p class="result2"><%= Math.floor(result) %> (units)</p>
+                <% } else if (awb >= 3.01 && awb <= 3.19) { %>
+                    <% var intial_value = 15.48; %>
+                    <% var intial_input = 3.01; %>
+                    <% var lmorg = (awb - intial_input) * 100; %>
+                    <% var dasara = (lmorg * 0.025) + intial_value; %>
+                    <% var result = parseFloat(fintake)/(dasara / 100000); %>
+                
+                    <p class="result">Result:</p>
+                    <p class="result1">Number:</p>
+                    <p class="result2"><%= Math.floor(result) %> (units)</p>
+                <% } else if (awb >= 3.20 && awb <= 7.03) { %>
+                    <% var intial_value = 15.995; %>
+                    <% var intial_input = 3.20; %>
+                    <% var lmorg = (awb - intial_input) * 100; %>
+                    <% var dasara = (lmorg * 0.02) + intial_value; %>
+                    <% var result = parseFloat(fintake)/(dasara / 100000); %>
+                
+                    <p class="result">Result:</p>
+                    <p class="result1">Number:</p>
+                    <p class="result2"><%= Math.floor(result) %> (units)</p>
+                <% } else if (awb >= 7.04 && awb <= 9.00) { %>
+                    <% var intial_value = 23.700; %>
+                    <% var intial_input = 7.04; %>
+                    <% var lmorg = (awb - intial_input) * 100; %>
+                    <% var dasara = (lmorg * 0.025) + intial_value; %>
+                    <% var result = parseFloat(fintake)/(dasara / 100000); %>
+                
+                    <p class="result">Result:</p>
+                    <p class="result1">Number:</p>
+                    <p class="result2"><%= Math.floor(result) %> (units)</p>
+                <% } else if (awb >= 9.01 && awb <= 12.24) { %>
+                    <% var intial_value = 28.625; %>
+                    <% var intial_input = 9.01; %>
+                    <% var lmorg = (awb - intial_input) * 100; %>
+                    <% var dasara = (lmorg * 0.031) + intial_value; %>
+                    <% var result = parseFloat(fintake)/(dasara / 100000); %>
+                
+                    <p class="result">Result:</p>
+                    <p class="result1">Number:</p>
+                    <p class="result2"><%= Math.floor(result) %> (units)</p>
+                <% } else if (awb >= 12.25 && awb <= 16.66) { %>
+                    <% var intial_value = 38.669; %>
+                    <% var intial_input = 12.25; %>
+                    <% var lmorg = (awb - intial_input) * 100; %>
+                    <% var dasara = (lmorg * 0.01) + intial_value; %>
+                    <% var result = parseFloat(fintake)/(dasara / 100000); %>
+                
+                    <p class="result">Result:</p>
+                    <p class="result1">Number:</p>
+                    <p class="result2"><%= Math.floor(result) %> (units)</p>
+                <% } else if (awb >= 16.67 && awb <= 19.99) { %>
+                    <% var intial_value = 43.089; %>
+                    <% var intial_input = 16.67; %>
+                    <% var lmorg = (awb - intial_input) * 100; %>
+                    <% var dasara = (lmorg * 0.012) + intial_value; %>
+                    <% var result = parseFloat(fintake)/(dasara / 100000); %>
+                
+                    <p class="result">Result:</p>
+                    <p class="result1">Number:</p>
+                    <p class="result2"><%= Math.floor(result) %> (units)</p>
+                <% } else if (awb >= 20.00 && awb <= 25.00) { %>
+                    <% var intial_value = 47.085; %>
+                    <% var intial_input = 20.00; %>
+                    <% var lmorg = (awb - intial_input) * 100; %>
+                    <% var dasara = (lmorg * 0.01) + intial_value; %>
+                    <% var result = parseFloat(fintake)/(dasara / 100000); %>
+                
+                    <p class="result">Result:</p>
+                    <p class="result1">Number:</p>
+                    <p class="result2"><%= Math.floor(result) %> (units)</p>
+                <% } %>
             <% } %>
         </div>
     </section>
