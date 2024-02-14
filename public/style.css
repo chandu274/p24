@@ -16,6 +16,7 @@ nav{
     height: 80px;
     width: 100%;
     position: fixed;
+    z-index: 1000; 
 }
 .logo_top_height{
     margin-top: 6px;
@@ -630,6 +631,30 @@ section div div h3 a:link {
 .heightq{
     height: 400px;
     padding-left: 269px;
+}
+.result{
+    font-family: serif;
+    font-weight: 700;
+    color: whitesmoke;
+    padding-top: 39px;
+    font-size: 25px;
+    padding-left: 10px;
+}
+.result1{
+    font-family: serif;
+    font-weight: 700;
+    color: whitesmoke;
+    padding-top: 10px;
+    font-size: 25px;
+    padding-left: 10px;
+}
+.result2{
+    font-family: serif;
+    font-weight: 700;
+    color: cornflowerblue;
+    padding-top: 10px;
+    font-size: 36px;
+    padding-left: 10px;
 }
 
 
